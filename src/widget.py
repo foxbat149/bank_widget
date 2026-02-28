@@ -13,3 +13,11 @@ def mask_account_card(bank_info: str) -> str:
         account[-1] = get_mask_account(number)
 
     return " ".join(account)
+
+
+def get_date(user_date: str) -> str:
+    """Функция для форматирования даты"""
+
+    formatted_date = user_date.split("-")
+
+    return f"{formatted_date[2][:2]}.{formatted_date[1]}.{formatted_date[0]}"
