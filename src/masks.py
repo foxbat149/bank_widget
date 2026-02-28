@@ -26,15 +26,9 @@ def get_mask_card_number(card_number: str) -> str:
     return masked_card_result_with_space
 
 
-print(get_mask_card_number(card_number="1234566789900009"))
-
-
 def get_mask_account(card_account: str) -> str:
     """Функция маскировки банского счета"""
     card_account = card_account.replace(" ", "")
 
     last_part = str(card_account[-4:])
     return f"**{last_part}"
-
-
-print(get_mask_account(card_account="1234566789900009"))
